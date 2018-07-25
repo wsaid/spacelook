@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var dbuser = process.env.DB_USER;
 var dbpass = process.env.DB_PASS;
 var mongoDB = 'mongodb://' + dbuser + ':' + dbpass + '@ds247121.mlab.com:47121/spacelook_dbase';
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
