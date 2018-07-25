@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 var PropertySchema = new Schema(
   {
-    name: {
+    title: {
     	type: String,
     	required: true,
     	max: 200
